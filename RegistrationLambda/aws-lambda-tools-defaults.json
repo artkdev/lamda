@@ -5,11 +5,19 @@
     "dotnet lambda help",
     "All the command line options for the Lambda command can be specified in this file."
   ],
-  "profile": "",
-  "region": "",
+  "profile": "admin",
+  "region": "us-east-2",
   "configuration": "Release",
   "function-runtime": "dotnet6",
-  "function-memory-size": 256,
-  "function-timeout": 30,
-  "function-handler": "RegistrationLambda::RegistrationLambda.Lambda::FunctionHandler"
+  "function-memory-size": 512,
+  "function-timeout": 15,
+  "function-handler": "RegistrationLambda::RegistrationLambda.Lambda::FunctionHandler",
+  "framework": "net6.0",
+  "function-name": "LambdaUrl",
+  "function-description": "init",
+  "package-type": "Zip",
+  "function-architecture": "x86_64",
+  "tracing-mode": "PassThrough",
+  "environment-variables": "",
+  "image-tag": ""
 }
