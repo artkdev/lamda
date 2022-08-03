@@ -1,0 +1,12 @@
+﻿{
+  "url": "https://platform.yourdomain.com/api/pull/customers",
+  "username": "internalOB",
+  "password": "Aa123456",
+  "apiKey": "264388973aaa9b2f9eb2aa84a9c7382e",
+  "body": {
+    "from": "2020-09-01 00:00:00",
+    "to": "2020-09-30 23:59:59",
+    "type": "3",
+    "page": "0"
+  }
+}
