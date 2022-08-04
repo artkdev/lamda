@@ -5,16 +5,17 @@ namespace Entities
 {
     public class InputEntity
     {
-        [JsonProperty("url")]
-        public string? Url { get; set; }
-        [JsonProperty("username")]
-        public string? Username { get; set; }
+        [JsonProperty("userip")]
+        public string? UserIp { get; set; }
+        [JsonProperty("firstname")]
+        public string? FirstName { get; set; }
+        [JsonProperty("lastname")]
+        public string? LastName { get; set; }
+        [JsonProperty("email")]
+        public string? Email { get; set; }
         [JsonProperty("password")]
         public string? Password { get; set; }
-        [JsonProperty("apiKey")]
-        public string? ApiKey { get; set; }
-
-        [JsonProperty("body")]
-        public JsonObject? Body { get; set; }
+        [JsonProperty("phone")]
+        public string? Phone { get; set; }
     }
 }
