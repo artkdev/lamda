@@ -12,21 +12,30 @@ namespace RegistrationLambda;
 public class Lambda
 {
     private readonly static string url = "https://fg.trafficvision.network/api/signup/procform";
-    private readonly static string username = "internalOB";
-    private readonly static string password = "Aa123456";
-    private readonly static string apikey = "2643889w34df345676ssdas323tgc738";
+    private static string username = string.Empty;
+    private static string password = string.Empty;
+    private static string apikey = "2643889w34df345676ssdas323tgc738";
 
     public static async Task<JsonObject?> FunctionHandler(InputEntity entity)
     {
         var client = new HttpClient();
 
-        var json = ReadJsonTemplate();
+        entity.Globalization ??= "us";
+        entity.Globalization = entity.Globalization.ToLower();
+
+        var json = ReadJsonTemplate(entity.Globalization);
         json["userip"] = entity.UserIp;
         json["firstname"] = entity.FirstName;
         json["lastname"] = entity.LastName;
         json["email"] = entity.Email;
         json["password"] = entity.Password;
         json["phone"] = entity.Phone;
+
+        username = json["h_user"].ToString();
+        password = json["h_password"].ToString();
+
+        json.Remove("h_user");
+        json.Remove("h_password");
 
         var content = new StringContent(json.ToJsonString(), Encoding.UTF8, "application/json");
 
@@ -40,9 +49,9 @@ public class Lambda
         return string.IsNullOrEmpty(responseString) ? new JsonObject() : JsonSerializer.Deserialize<JsonObject>(responseString);
     }
 
-    public static JsonObject ReadJsonTemplate()
+    public static JsonObject ReadJsonTemplate(string globalization)
     {
-        string filename = "template.json";
+        string filename = $"template_{globalization}.json";
 
         string text = File.ReadAllText(filename);
         return JsonSerializer.Deserialize<JsonObject>(text);

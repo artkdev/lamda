@@ -1,8 +1,9 @@
 ﻿{
-  "userip":  "",
-  "firstname":  "",
-  "lastname":  "",
-  "email":  "",
-  "password":  "",
-  "phone":  ""
+  "userip": "",
+  "firstname": "",
+  "lastname": "",
+  "email": "",
+  "password": "",
+  "phone": "",
+  "globalization": ""
 }

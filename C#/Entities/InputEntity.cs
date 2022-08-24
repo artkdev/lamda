@@ -17,5 +17,7 @@ namespace Entities
         public string? Password { get; set; }
         [JsonProperty("phone")]
         public string? Phone { get; set; }
+        [JsonProperty("globalization")]
+        public string? Globalization { get; set; }
     }
 }
