@@ -53,6 +53,9 @@ public class Lambda
     {
         string filename = $"template_{globalization}.json";
 
+        if (!File.Exists(filename))
+            throw new Exception("Not correct globalization argument");
+
         string text = File.ReadAllText(filename);
         return JsonSerializer.Deserialize<JsonObject>(text);
     }
