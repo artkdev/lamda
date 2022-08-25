@@ -20,7 +20,7 @@ public class Lambda
     {
         var client = new HttpClient();
 
-        entity.Globalization ??= "us";
+        entity.Globalization ??= "en";
         entity.Globalization = entity.Globalization.ToLower();
 
         var json = ReadJsonTemplate(entity.Globalization);
