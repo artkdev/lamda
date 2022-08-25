@@ -1,12 +1,12 @@
 ﻿{
-  "ai": "ask from your trackbox partner",
+  "ai": "2958077",
   "ci": "1",
-  "gi": "ask from your trackbox partner",
+  "gi": "54",
   "userip": "",
   "firstname": "",
   "lastname": "",
   "email": "",
-  "password": "Aa12345!",
+  "password": "",
   "phone": "",
   "so": "funnelname",
   "sub": "FreeParam",
@@ -25,5 +25,7 @@
   "ad": "FreeParam",
   "term": "FreeParam",
   "campaign": "FreeParam",
-  "medium": "FreeParam"
+  "medium": "FreeParam",
+  "h_user": "internalOB",
+  "h_password": "Aa123456"
 }
