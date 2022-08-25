@@ -16,12 +16,18 @@ public class Lambda
     private static string password = string.Empty;
     private static string apikey = "2643889w34df345676ssdas323tgc738";
 
-    public static async Task<JsonObject?> FunctionHandler(InputEntity entity)
+    public static async Task<JsonObject?> FunctionHandler(InputEntity entity, ILambdaContext lambdaContext)
     {
         var client = new HttpClient();
 
         entity.Globalization ??= "en";
         entity.Globalization = entity.Globalization.ToLower();
+
+        if (entity.Globalization != "en" && entity.Globalization != "de")
+        {
+            lambdaContext.Logger.LogLine("Reset globalization to default value \"en\"");
+            entity.Globalization = "en";
+        }
 
         var json = ReadJsonTemplate(entity.Globalization);
         json["userip"] = entity.UserIp;

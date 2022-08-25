@@ -18,10 +18,10 @@
     <ProjectReference Include="..\Entities\Entities.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <None Update="template_ge.json">
+    <None Update="template_de.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="template_us.json">
+    <None Update="template_en.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
