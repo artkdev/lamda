@@ -34,7 +34,7 @@ public class Lambda
         json["firstname"] = entity.FirstName;
         json["lastname"] = entity.LastName;
         json["email"] = entity.Email;
-        json["password"] = entity.Password;
+        //json["password"] = entity.Password;
         json["phone"] = entity.Phone;
 
         username = json["h_user"].ToString();

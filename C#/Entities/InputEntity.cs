@@ -13,8 +13,8 @@ namespace Entities
         public string? LastName { get; set; }
         [JsonProperty("email")]
         public string? Email { get; set; }
-        [JsonProperty("password")]
-        public string? Password { get; set; }
+        //[JsonProperty("password")]
+        //public string? Password { get; set; }
         [JsonProperty("phone")]
         public string? Phone { get; set; }
         [JsonProperty("globalization")]
